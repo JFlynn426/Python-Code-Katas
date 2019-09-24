@@ -7,6 +7,8 @@ def Descending_Order(num):
     for char in range (len(list)-1, -1, -1):
         string = string + list[char]
     return int(string)
+
+
 def row_sum_odd_numbers(n):
     x = 1
     y = 0
@@ -15,3 +17,14 @@ def row_sum_odd_numbers(n):
     for j in range (1, n):
         y += 2 * j
     return (n * x + y)
+
+
+import math
+
+def is_square(n):
+    if n < 0:
+        return False
+    elif int(math.sqrt(n)) == math.sqrt(n):
+        return True
+    else:
+        return False

@@ -43,3 +43,13 @@ def duplicate_count(text):
         else:
             i += 1
     return count
+
+def countBits(n):
+    count = 0
+    while n:
+        if n % 2 == 0:
+            n = n / 2
+        else:
+            count += 1
+            n = n - 1
+    return count

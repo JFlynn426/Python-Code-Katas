@@ -65,3 +65,12 @@ def likes(names):
         return f"{names[0]}, {names[1]} and {names[2]} like this"
     elif len(names) >= 4:
         return f"{names[0]}, {names[1]} and {len(names) - 2} others like this"
+
+def sort_array(source_array):
+    sorted_array = sorted([i for i in source_array if i % 2 == 1])
+    counter = 0
+    for j in range(0,len(source_array)):
+        if source_array[j] % 2 == 1:
+            source_array[j] = sorted_array[counter]
+            counter += 1
+    return source_array

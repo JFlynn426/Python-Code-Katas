@@ -74,3 +74,11 @@ def sort_array(source_array):
             source_array[j] = sorted_array[counter]
             counter += 1
     return source_array
+
+def flatten_and_sort(array):
+    return_array = []
+    for arr in array:
+        for value in arr:
+            return_array.append(value)
+    return_array.sort()
+    return return_array

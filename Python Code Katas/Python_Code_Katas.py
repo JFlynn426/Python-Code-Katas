@@ -82,3 +82,56 @@ def flatten_and_sort(array):
             return_array.append(value)
     return_array.sort()
     return return_array
+
+def sockMerchant(n, ar):
+    ar.sort()
+    i = 0
+    count = 0
+    while i < n - 1:
+        if ar[i] == ar[i+1]:
+            count += 1
+            i += 2
+        else:
+            i += 1
+    return count
+
+
+if __name__ == '__main__':
+    fptr = open(os.environ['OUTPUT_PATH'], 'w')
+
+    n = int(input())
+
+    ar = list(map(int, input().rstrip().split()))
+
+    result = sockMerchant(n, ar)
+
+    fptr.write(str(result) + '\n')
+
+    fptr.close()
+
+
+
+def countingValleys(n, s):
+    elevation = 0
+    count = 0
+    for letter in s:
+        if letter == 'U':
+            elevation += 1
+            if elevation == 0:
+                count += 1
+        else:
+            elevation -= 1
+    return count
+
+if __name__ == '__main__':
+    fptr = open(os.environ['OUTPUT_PATH'], 'w')
+
+    n = int(input())
+
+    s = input()
+
+    result = countingValleys(n, s)
+
+    fptr.write(str(result) + '\n')
+
+    fptr.close()
